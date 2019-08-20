@@ -40,3 +40,4 @@ secrets.yml
 /src/main/java/com/walmart/test/model/*.java
 src/main/java/com/walmart/test/model/*.java
 /src/main/java/com/walmart/test/ctrl/RestCtrl.java
+src/main/java/com/walmart/test/ctrl/RestCtrl.java
