@@ -39,3 +39,4 @@ secrets.yml
 .sts4-cache
 /src/main/java/com/walmart/test/model/*.java
 src/main/java/com/walmart/test/model/*.java
+/src/main/java/com/walmart/test/ctrl/RestCtrl.java
