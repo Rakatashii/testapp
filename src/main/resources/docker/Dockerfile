@@ -1,8 +1,6 @@
 FROM openjdk:8-jdk
 
-#FROM docker
-
-#COPY ../../../
+#FROM docker.prod.walmart.com/samstechinfra/alpine-nginx-jdk:0.1.5
 
 ARG jarFileName
 
@@ -14,12 +12,6 @@ COPY /src/main/resources/docker/startup.sh /home/.
 
 RUN chmod 755 /home/startup.sh
 
-COPY $jarFileName /home/testapp-1.0.0-SNAPSHOT.jar
+COPY $jarFileName /home/testapp.jar
 
 ENTRYPOINT ["/home/startup.sh"]
-
-
-
-
-
-

@@ -17,7 +17,7 @@ import com.walmart.fastrun.service.QPService;
 import reactor.core.publisher.Mono;
 
 @RestController
-@RequestMapping("/mock")
+@RequestMapping("/wm")
 public class RestCtrl {
 	
 	//@Autowired private WebClientConfig webClientConfig;
@@ -27,10 +27,16 @@ public class RestCtrl {
 	@Autowired 
 	private QPService qpService;
 
-	@GetMapping("/getDispensedOrder/{orderId}")
+	@GetMapping("/mock/getDispensedOrder/{orderId}")
 	private Mono<DispensedOrderVO> getDispensedOrder(@PathVariable String orderId) {
 		
 		return qpService.getDispensedOrderFromString();
 		
+	}
+	
+	@GetMapping("/simpleTest")
+	private Mono<String> c(@PathVariable String orderId) {
+		
+		return Mono.just("HIT /wm/simpleTest");
 	}
 }
