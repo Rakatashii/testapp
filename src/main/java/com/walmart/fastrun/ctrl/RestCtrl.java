@@ -1,7 +1,5 @@
 package com.walmart.fastrun.ctrl;
 
-import java.io.IOException;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +8,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.walmart.fastrun.model.DispensedOrderVO;
 import com.walmart.fastrun.service.QPService;
 
@@ -35,7 +32,7 @@ public class RestCtrl {
 	}
 	
 	@GetMapping("/simpleTest")
-	private Mono<String> c(@PathVariable String orderId) {
+	private Mono<String> simpleTest() {
 		
 		return Mono.just("HIT /wm/simpleTest");
 	}
