@@ -1,4 +1,4 @@
-package com.walmart.test.config;
+package com.walmart.fastrun.config;
 
 import org.springframework.http.HttpHeaders;
 

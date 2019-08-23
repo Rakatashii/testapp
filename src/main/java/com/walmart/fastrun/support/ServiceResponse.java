@@ -1,4 +1,4 @@
-package com.walmart.test.support;
+package com.walmart.fastrun.support;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

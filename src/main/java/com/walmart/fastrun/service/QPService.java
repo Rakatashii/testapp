@@ -1,4 +1,4 @@
-package com.walmart.test.service;
+package com.walmart.fastrun.service;
 
 import java.io.IOException;
 
@@ -8,8 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.walmart.test.ctrl.RestCtrl;
-import com.walmart.test.model.DispensedOrderVO;
+import com.walmart.fastrun.ctrl.RestCtrl;
+import com.walmart.fastrun.model.DispensedOrderVO;
 
 import reactor.core.publisher.Mono;
 

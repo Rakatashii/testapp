@@ -1,5 +1,6 @@
-package com.walmart.test.support;
+package com.walmart.fastrun.support;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.server.ServerResponse;
 
@@ -13,6 +14,10 @@ public class ResponseHandler {
 
     public Mono<ServerResponse> getServerResponse(){
         return ServerResponse.ok().body(Mono.just(successServiceResp), ServiceResponse.class);
+    }
+    
+    public <T> Mono<ServerResponse> get505Response(T respPayload){
+        return ServerResponse.status(HttpStatus.BAD_GATEWAY).body(Mono.just(successServiceResp), ServiceResponse.class);
     }
 
     public <T> Mono<ServerResponse> getServerResponse(T respPayload){
